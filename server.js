@@ -20,9 +20,12 @@ app.use(cookieParser());
 // Route files
 const hospitals = require('./routes/hospitals');
 const auth = require('./routes/auth');
+const appointments = require('./routes/appointments');
 
+app.set('query parser', 'extended');
 app.use('/api/v1/hospitals',hospitals); 
 app.use('/api/v1/auth',auth);
+app.use('/api/v1/appointments',appointments);
 
 const PORT=process.env.PORT || 5000;
 
@@ -34,3 +37,6 @@ process.on('unhandledRejection',(err,promise) => {
     //close server and exit process if have error
     server.close(()=>process.exit(1));
 });
+
+
+
