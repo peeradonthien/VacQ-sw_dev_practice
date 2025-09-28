@@ -34,11 +34,11 @@ function Login(){
             <section className='form'>
                 <form onSubmit={onSubmit}>
                     <div className='form-group'>
-                        <input type="email" className='form-control' id='email' name='email' value={email} onCharge={onChange} placeholder='Ender Your email' required/>
+                        <input type="email" className='form-control' id='email' name='email' value={email} onChange={onChange} placeholder='Ender Your email' required/>
                     </div>
 
                     <div className='form-group'>
-                        <input type="password" className='form-control' id='password' name='password' value={password} onCharge={onChange} placeholder='Ender Your password' required/>
+                        <input type="password" className='form-control' id='password' name='password' value={password} onChange={onChange} placeholder='Ender Your password' required/>
                     </div>
 
                     <div className='form-group'>
